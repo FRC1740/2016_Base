@@ -1,11 +1,4 @@
 #include "OI.h"
-#include "Commands/Gripper/Grab.h"
-#include "Commands/Gripper/Release.h"
-#include "Commands/Lifter/Raise.h"
-#include "Commands/Lifter/Lower.h"
-#include "Commands/Lifter/CalibrateLifter.h"
-#include "Commands/Lifter/MoveToLevel.h"
-#include "Commands/Gripper/Toggle.h"
 //#include "Commands/Rangefinder/RangeLight.h"
 #include "Commands/Launchpad/LightLED.h"
 
@@ -86,19 +79,19 @@ OI::OI()
      * Uncomment the appropriate lines for the buttons you would like to map
      *
      */
-    JoystickButton *NES_2 = new JoystickButton(NESController, 2);   // The "A Button" for closing the forks
-    JoystickButton *NES_3 = new JoystickButton(NESController, 3);   // The "B Button" for opening the forks
-    JoystickButton *NES_9 = new JoystickButton(NESController, 9);   // The "Select Button" for lowering the forks
-    JoystickButton *NES_10 = new JoystickButton(NESController, 10); // The "Start Button" for raising the forks
+//    JoystickButton *NES_2 = new JoystickButton(NESController, 2);   // The "A Button" for closing the forks
+ //   JoystickButton *NES_3 = new JoystickButton(NESController, 3);   // The "B Button" for opening the forks
+  //  JoystickButton *NES_9 = new JoystickButton(NESController, 9);   // The "Select Button" for lowering the forks
+   // JoystickButton *NES_10 = new JoystickButton(NESController, 10); // The "Start Button" for raising the forks
 
     // Grabber
     // threeAxis_8->WhileHeld(new PrintRange());
-    NES_2->WhenPressed(new Toggle());
-    NES_3->WhenPressed(new Toggle());
+ //   NES_2->WhenPressed(new Toggle());
+//    NES_3->WhenPressed(new Toggle());
 
     // Lifter
-    NES_9->WhileHeld(new Raise());
-    NES_10->WhileHeld(new Lower());
+//    NES_9->WhileHeld(new Raise());
+//    NES_10->WhileHeld(new Lower());
 // TODO Map button to auto stack
 //    JoystickButton *launchPad_1 = new JoystickButton(launchPad, 1); // button 1 on the launchpad
     // Connect the buttons to commands

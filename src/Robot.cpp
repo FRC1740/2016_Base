@@ -1,8 +1,4 @@
 #include <Commands/Autos/BasicAuto.h>
-#include "Commands/Autos/PickUpAndPushAuto.h"
-#include "Commands/Autos/TrashCan.h"
-#include "Commands/Autos/YellowToteAuto.h"
-#include "Commands/Autos/BoxAndSkateAuto.h"
 #include "Commands/Other/DoNothing.h"
 #include "WPILib.h"
 #include "Commands/Command.h"
@@ -54,10 +50,7 @@ private:
 //		->Log("added objects", VERBOSE_MESSAGE);
 		autonomouschooser = new SendableChooser();
 		autonomouschooser->AddObject("Basic Auto: Drive Forward", new BasicAuto());
-		autonomouschooser->AddObject("Grab box and skate to the right", new BoxAndSkateAuto());
-		autonomouschooser->AddObject("Lift TrashCan, Skate and Push Box", new PickUpAndPushAuto());
-		autonomouschooser->AddObject("Pickup just the trashcan and drive OVER BUMP", new TrashCan(4.0));
-		autonomouschooser->AddObject("Pickup just the trashcan and drive NO BUMP", new TrashCan(3.8));
+
 //		autonomouschooser->AddObject("Testing move", new Move(270, .3, 5));
 		autonomouschooser->AddDefault("Do Nothing", new DoNothing(15));
 //		autonomouschooser->AddObject("Yellow Totes", new YellowToteAuto());
